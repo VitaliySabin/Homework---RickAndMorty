@@ -5,11 +5,11 @@
 //  Created by Виталий Сабин on 07.05.2023.
 //
 
-struct RickAndMorty {
+struct RickAndMorty: Decodable {
     let results: [Character]
 }
 
-struct Character {
+struct Character: Decodable {
     let name: String
     let status: String
     let species: String
@@ -17,15 +17,15 @@ struct Character {
     let origin: Origin
     let location: Location
     let image: String
-    let episodes: [String]
+    let episode: [String]
 }
 
-struct Origin {
+struct Origin: Decodable {
     let name: String
     let url: String
 }
 
-struct Location {
+struct Location: Decodable {
     let name: String
     let url: String
 }
