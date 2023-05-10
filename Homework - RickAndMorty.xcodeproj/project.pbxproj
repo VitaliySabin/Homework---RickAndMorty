@@ -16,6 +16,7 @@
 		68699FBD2A07DD3F0086780D /* RickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68699FBC2A07DD3E0086780D /* RickAndMorty.swift */; };
 		68724E902A0BFA1B00623340 /* ChararcterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68724E8F2A0BFA1B00623340 /* ChararcterCell.swift */; };
 		68724E922A0C000D00623340 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68724E912A0C000D00623340 /* CharactersViewController.swift */; };
+		68724E952A0C012000623340 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68724E942A0C012000623340 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		68699FBC2A07DD3E0086780D /* RickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty.swift; sourceTree = "<group>"; };
 		68724E8F2A0BFA1B00623340 /* ChararcterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChararcterCell.swift; sourceTree = "<group>"; };
 		68724E912A0C000D00623340 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		68724E942A0C012000623340 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +64,12 @@
 		68699FA32A07DCE60086780D /* Homework - RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
-				68724E8E2A0BF9F400623340 /* Views */,
-				68699FB82A07DD010086780D /* App */,
-				68699FBB2A07DD220086780D /* Model */,
 				68699FB92A07DD090086780D /* ViewControllers */,
+				68724E8E2A0BF9F400623340 /* Views */,
+				68724E932A0C010900623340 /* Services */,
+				68699FBB2A07DD220086780D /* Model */,
 				68699FBA2A07DD170086780D /* Storyboards */,
+				68699FB82A07DD010086780D /* App */,
 				68699FAD2A07DCE80086780D /* Assets.xcassets */,
 			);
 			path = "Homework - RickAndMorty";
@@ -114,6 +117,14 @@
 				68724E8F2A0BFA1B00623340 /* ChararcterCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		68724E932A0C010900623340 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				68724E942A0C012000623340 /* NetworkManager.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				68699FBD2A07DD3F0086780D /* RickAndMorty.swift in Sources */,
 				68699FA92A07DCE60086780D /* ViewController.swift in Sources */,
 				68724E922A0C000D00623340 /* CharactersViewController.swift in Sources */,
+				68724E952A0C012000623340 /* NetworkManager.swift in Sources */,
 				68724E902A0BFA1B00623340 /* ChararcterCell.swift in Sources */,
 				68699FA52A07DCE60086780D /* AppDelegate.swift in Sources */,
 				68699FA72A07DCE60086780D /* SceneDelegate.swift in Sources */,
