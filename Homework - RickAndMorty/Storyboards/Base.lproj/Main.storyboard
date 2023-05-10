@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Rick and Morty-->
         <scene sceneID="C6E-93-C41">
             <objects>
                 <tableViewController id="gyx-c2-Czv" customClass="CharactersViewController" customModule="Homework___RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +85,7 @@
                             <outlet property="delegate" destination="gyx-c2-Czv" id="CSk-9m-e0D"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Atq-dg-pNa"/>
+                    <navigationItem key="navigationItem" title="Rick and Morty" id="Atq-dg-pNa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2b-L6-Kkg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,8 +95,8 @@
         <scene sceneID="Ccv-sl-uWN">
             <objects>
                 <navigationController id="Ybn-hv-BVk" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ztg-Tj-C0U">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Ztg-Tj-C0U">
+                        <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
