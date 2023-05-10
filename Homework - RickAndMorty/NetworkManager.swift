@@ -20,7 +20,12 @@ final class NetworkManager {
     
     private init() {}
     
-    private func fetchImage(from url: URL, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+    func fetchImage(from url: String, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
         DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: url) else {
                 completion(.failure(.noData))
