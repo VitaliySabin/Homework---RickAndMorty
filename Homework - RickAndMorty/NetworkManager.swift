@@ -14,7 +14,9 @@ enum NetworkError: Error {
 }
 
 final class NetworkManager {
-    private let url = "https://rickandmortyapi.com/api/character"
+    var url: String {
+        "https://rickandmortyapi.com/api/character"
+    }
     
     static let shared = NetworkManager()
     
@@ -25,7 +27,6 @@ final class NetworkManager {
             completion(.failure(.invalidURL))
             return
         }
-        
         DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: url) else {
                 completion(.failure(.noData))
@@ -37,7 +38,11 @@ final class NetworkManager {
         }
     }
     
-    private func fetchRickAndMorty(from url: URL, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+    func fetchRickAndMorty<T: Decodable>(_ type: T.Type, from url: String, completion: @escaping(Result<T, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidURL))
+            return
+        }
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
                 completion(.failure(.noData))
@@ -46,7 +51,10 @@ final class NetworkManager {
             }
             do {
                 let decoder = JSONDecoder()
-                let rickAndMorty = try decoder.decode(RickAndMorty.self, from: data)
+                let rickAndMorty = try decoder.decode(T.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(rickAndMorty))
+                }
             } catch {
                 completion(.failure(.decodingError))
                 print(error.localizedDescription)
