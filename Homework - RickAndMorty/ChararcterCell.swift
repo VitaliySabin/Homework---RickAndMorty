@@ -17,11 +17,11 @@ final class CharacterCell: UITableViewCell {
     
     private let networkManager = NetworkManager.shared
     
-    private func configure(with character: Character) {
-        nameLabel.text = character.name
-        statusLabel.text = character.status
-        speciesLabel.text = character.species
-        genderLabel.text = character.gender
+    func configure(with character: Character) {
+        nameLabel.text = "Name: \(character.name)"
+        statusLabel.text = "Status: \(character.status)"
+        speciesLabel.text = "Species: \(character.species)"
+        genderLabel.text = "Gender: \(character.gender)"
         
         networkManager.fetchImage(from: character.image) { [weak self] result in
             switch result {
